@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework</title>
+</head>
+
+<body>
+  <script>
+    // Из целочисленного числа сделать числа с плав точкой
+
+    a = 3 + +".3"
+    3.3
+    typeof (a)
+
+
+    // Вытащить все цифры из строк например "фыов33рыфвр" результатом должно быть 33
+
+    var arr = ["ф", "ы", "о", "в", 3, 3, "р"];
+    var arr2 = [];
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i] === 1 || arr[i] === 2 || arr[i] === 3 || arr[i] === 4 || arr[i] === 5 || arr[i] === 6 || arr[i] ===
+        7 || arr[i] === 8 || arr[i] === 9 || arr[i] === 0) {
+        arr2.push(arr[i])
+      }
+    }
+    console.log(arr2)
+
+    // [1,2,3,4, false] узнать сумму всех чисел массива
+
+    var sum = 0;
+    var arr = [1, 2, 3, 4, false];
+    for (i = 0; i < arr.length; i++) {
+      sum = sum + arr[i]
+    }
+    console.log(sum)
+
+    //  "123"№№223344" - узнать количество символов в данной строке ( символы типы №%:,.;"№% ) все кроме букв и цифр 
+    console.log(("123'№№223344".match(/[^\d\sA-Z]/gi) || []).length)
+
+
+    // [1, 1.3, 55, 66.3, 5.3] - подсчитать количество символов которые делаться без остатка на 5
+
+    var arr = [1, 1.3, 55, 66.3, 5.3];
+    var arr2 = [];
+
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i] % 5 === 0) {
+        arr2.push(arr[i])
+      }
+    }
+    console.log(arr2);
+
+    // Сделать реверс элементов массива например из ["1", "3", "vasya"] -> ["vasya", "3", "1"] при этом не использовать встроенный метод reverse()
+
+    var array = ["1", "3", "vasya"];
+    var array2 = [];
+
+    for (let i = array.length - 1; i >= 0; i--) {
+      console.log(array[i])
+    }
+    for (let i = array.length - 1; i >= 0; i--) {
+      array2.push(array[i])
+    }
+    console.log(array2)
+
+    //  Привести практический пример того когда функция может вернуть функцию
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+    a = getRandomInt(10);
+    console.log(a);
+
+    //  Создать абсолютно рандомный массив имен и сделать сортировку массива не используя метод  sort()
+
+    function Sort(array) {
+      for (let j = array.length - 1; j > 0; j--) {
+        for (let i = 0; i < j; i++) {
+          if (array[i] > array[i + 1]) {
+            let temp = array[i];
+            array[i] = array[i + 1];
+            array[i + 1] = temp;
+          }
+        }
+      }
+    }
+    var names = ["Helen", "Anna", "Mary", "Michael"];
+    Sort(names);
+    console.log(names);
+  </script>
+</body>
+
+</html>
